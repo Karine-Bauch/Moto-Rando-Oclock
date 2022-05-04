@@ -1,7 +1,7 @@
 BEGIN;
 
 --setting up the structure
-DROP TABLE 
+DROP TABLE IF EXISTS "user", district, itinerary, motorbike, picture;
 
 CREATE TABLE "user" (
     "id" INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,

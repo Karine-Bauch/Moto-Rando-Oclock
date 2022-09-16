@@ -17,13 +17,15 @@ const itineraryMapper = {
         "itinerary"."trace" AS "itinerary_trace",
         "user"."alias" AS "user_alias",
         json_agg(json_build_object('district_name', district.name, 'district_latitude', district.latitude, 'district_longitude', district.longitude, 'district_zoom', district.zoom))AS "districts",
-        json_agg(json_build_object('pic_title', p.title, 'pic_link',p.link)) AS "pictures"
+        json_agg(json_build_object('pic_title', p.title, 'pic_link', p.link)) AS "pictures"
         FROM "itinerary"
         LEFT JOIN "picture" p ON "itinerary"."id" = "itinerary_id"
         JOIN "user" ON "itinerary"."user_id" = "user"."id"
         JOIN "district" ON "itinerary"."district_id" = "district"."id"
         GROUP BY "itinerary"."id", "user"."alias"`,
     );
+
+    console.log(result.rows);
 
     if (!result.rows) {
       throw new Error('No record available in table "itinerary"');

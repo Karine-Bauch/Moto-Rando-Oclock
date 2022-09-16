@@ -1,4 +1,7 @@
-# projet-01-viso-rando-moto
+# MOTO'RANDO - Projet de fin de formation
+
+![Accueil - Moto'rando](../0-VIDEOS_PROJECTS/Motorando-Accueil.png)
+
 
 L’origine du projet est venue de l’utilisation de l’application visoRando (pour les randonnées pédestres), et l’envie de créer une appli dans le même esprit,  pour les motards, où chacun pourrait partager ses balades et ses bons plans avec une communauté qui lui ressemble.
 
